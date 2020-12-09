@@ -45,4 +45,7 @@ export class AuthService {
             accessToken: this.jwtService.sign(payload)
         };
     }
+    validateToken(jwt: string) {
+        return this.jwtService.verify(jwt);
+    }
 }
